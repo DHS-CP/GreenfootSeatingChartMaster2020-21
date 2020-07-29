@@ -1,10 +1,9 @@
 import java.util.*;
 import greenfoot.*;
 import java.util.ArrayList;
- // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  
 /**
- * Write a description of class Classroom here.
+ * Sets the size of the world and creates the students
  * 
  * @Oleg Bychenkov (your name) 
  * @1.0 (a version number or a date)
@@ -31,10 +30,6 @@ public class Classroom extends World
    
      private void prepare()
     {
-        // Add three lines to this doc with your class constructor and your row and seat number
-        // Make sure to match your first and last name to the class file you created.
-
-        /* Example */
         
         OlegBychenkov olegbychenkov = new OlegBychenkov("Oleg", "Bychenkov", 2, 3);
         addObject(olegbychenkov, 2, 3);

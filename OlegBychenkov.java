@@ -10,7 +10,7 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
 {
 
     /**
-     * Constructor for the KilgoreTrout class.
+     * Constructor for the OlegBychenkov class.
      * Constructors are special methods with the same exact name as the class name.  
      * Constructors to not have return types.
      * Constructors can be overloaded. This means we can call a constructor with different sets of parameter
@@ -42,9 +42,8 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
         lastName="Bychenkov";
         myRow=2;
         mySeat=3;
-       // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
+        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
         setImage(portraitFile);
         sitting=true;
@@ -56,24 +55,23 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
      */   
     public void act() 
     {
-        // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
-          //  if (sitting){
-                sitting=false;
-                setImage(standingFile);
-                System.out.println(""); // Print a blank line to create space between any student output.
-                getName();
-                sayName(soundFile);
+            sitting=false;
+            setImage(standingFile);
+            System.out.println(""); // Print a blank line to create space between any student output.
+            getName();
+            sayName(soundFile);
             
-                myHobby("I enjoy reading fantasy and science fiction");
+            myHobby("I enjoy reading fantasy and science fiction");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
-            
-                bounceAround();
-                provideLesson();
-                sitDown();
-            }
+        
+            bounceAround();
+            returnToSeat();
+            provideLesson();
+            sitDown();
+        }
         
     } 
     
@@ -90,6 +88,7 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
      * classes, make sure to fully document so other students can use the same interface.
      */
     public void provideLesson(){
+        Greenfoot.delay(30);
         while (! sitting) {
         String q=Greenfoot.ask("Are you ready to start (yes/no)");
         if (q.contains("yes")){
@@ -132,7 +131,6 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
             }
             Greenfoot.delay(5);
         }   
-           Greenfoot.delay(20);
            returnToSeat();
     }
      /**
