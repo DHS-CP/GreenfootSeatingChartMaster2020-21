@@ -60,6 +60,7 @@ public abstract class Student extends Actor
     
     public void returnToSeat(){
         setLocation(mySeat,myRow);
+        setRotation(360);
     }
     public void sitDown(){
         returnToSeat();

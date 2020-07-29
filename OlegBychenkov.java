@@ -70,7 +70,7 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                bounceAround();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+                bounceAround();
                 provideLesson();
                 sitDown();
             }
@@ -126,7 +126,10 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
             move(1);
             if (i % 5 == 0) {
                 turn(Greenfoot.getRandomNumber(360));
-            }   
+            }
+            if (isAtEdge()) {
+                turn(86);
+            }
             Greenfoot.delay(5);
         }   
            Greenfoot.delay(20);
