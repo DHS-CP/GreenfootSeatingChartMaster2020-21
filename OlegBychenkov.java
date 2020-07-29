@@ -65,12 +65,12 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("abcdefg");
+                myHobby("I enjoy reading fantasy and science fiction");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+                bounceAround();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
                 provideLesson();
                 sitDown();
             }
@@ -119,28 +119,15 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
      * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
-        setLocation(0,0);
+    public void bounceAround(){
          Greenfoot.delay(10);
-        // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
-        }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
+        // bounce
+        for (int i=1;i<=30;i++){
+            move(1);
+            if (i % 5 == 0) {
+                turn(Greenfoot.getRandomNumber(360));
+            }   
+            Greenfoot.delay(5);
         }   
            Greenfoot.delay(20);
            returnToSeat();
