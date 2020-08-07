@@ -1,7 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * 
+ * Specific Oleg student that sets all the student-specific details like the
+ * name, location, and image files. Special movement when clicked is moving
+ * in random directions for 30 ticks.
  * 
  * @ author Oleg Bychenkov
  * @ version 1.0
@@ -50,7 +52,7 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
     }
     
      /**
-     * Act - do whatever the KilgoreTrout actor wants to do. This method is called whenever
+     * Act - do whatever the OlegBychenkov actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */   
     public void act() 
@@ -89,7 +91,7 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
      */
     public void provideLesson(){
         Greenfoot.delay(30);
-        while (! sitting) {
+        while (!sitting) {
         String q=Greenfoot.ask("Are you ready to start (yes/no)");
         if (q.contains("yes")){
          // put in your lesson here - you can open up a browser for a screencast
@@ -115,8 +117,9 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
         // may not need
     }
     /**
-     * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
-     * You should write your own methods to perform your own animation for your character/avatar.
+     * This is a local method specific to the OlegBychenkov class used to animate the character once the image is clicked on.
+     * Moves the character constantly, turning a random direction every 5 ticks
+     * and bouncing off edges for a total of 30 ticks and then return to seat.
      */
     public void bounceAround(){
          Greenfoot.delay(10);
