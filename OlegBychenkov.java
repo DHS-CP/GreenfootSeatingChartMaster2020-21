@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @ author Oleg Bychenkov
  * @ version 1.0
  */
-public class OlegBychenkov extends Student implements SpecialInterestOrHobby
+public class OlegBychenkov extends Student implements SpecialInterestOrHobby, NumberOfSiblings, CSALearnedSoFar
 {
 
     /**
@@ -65,10 +65,9 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
             sayName(soundFile);
             
             myHobby("I enjoy reading fantasy and science fiction");
-            // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
-            // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
-            // Call the sitDown() method to move back  to your seat
-        
+            System.out.println("I have " + Integer.toString(numberOfBrothers()) +" brother.");
+            LearnedSoFar();
+            
             bounceAround();
             returnToSeat();
             provideLesson();
@@ -143,6 +142,19 @@ public class OlegBychenkov extends Student implements SpecialInterestOrHobby
      */
      public void myHobby(String s) {
          System.out.println(s);
-}
+     }
+     public void LearnedSoFar() {
+         System.out.println("So far in CSA I have learned the basics of Java such as syntax, objects and constructors as well as refactoring code.");
+     }
+     public int numberOfSiblings() {
+         return 1;
+     }
+     public int numberOfBrothers() {
+         return 1;
+     }
+     public int numberOfSisters() {
+         return 0;
+     }
+     
 
 }
