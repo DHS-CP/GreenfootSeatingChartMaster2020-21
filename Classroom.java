@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Write a description of class Classroom here.
  * 
- * @author (your name) 
+ * @author Shahil Patel 
  * @version (a version number or a date)
  */
 public class Classroom extends World
@@ -35,9 +35,9 @@ public class Classroom extends World
         // Make sure to match your first and last name to the class file you created.
 
         /* Example */
-        KilgoreTrout kilgoretrout = new KilgoreTrout("Kilgore", "Trout", 1, 1);
-        addObject(kilgoretrout, 1, 1);
-        kilgoretrout.sitDown();
+        ShahilPatel shahilpatel = new ShahilPatel("Shahil", "Patel", 1, 1);
+        addObject(shahilpatel, 1, 1);
+        shahilpatel.sitDown();
          
         
 
