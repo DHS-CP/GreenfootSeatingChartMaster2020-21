@@ -1,8 +1,8 @@
 /**
  * Write a description of interface CSALearnedSoFar here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Oleg Bychenkov (your name) 
+ * @1.0 (a version number or a date)
  * 
  * This was part of the 2019-20 version of the assignment so that students could reflect on their summer homework that was
  * more specific to Java syntax.

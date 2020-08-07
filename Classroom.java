@@ -1,13 +1,12 @@
 import java.util.*;
 import greenfoot.*;
 import java.util.ArrayList;
- // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  
 /**
- * Write a description of class Classroom here.
+ * Sets the size of the world and creates the students
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Oleg Bychenkov 
+ * @1.0 
  */
 public class Classroom extends World
 {
@@ -31,16 +30,10 @@ public class Classroom extends World
    
      private void prepare()
     {
-        // Add three lines to this doc with your class constructor and your row and seat number
-        // Make sure to match your first and last name to the class file you created.
-
-        /* Example */
-        KilgoreTrout kilgoretrout = new KilgoreTrout("Kilgore", "Trout", 1, 1);
-        addObject(kilgoretrout, 1, 1);
-        kilgoretrout.sitDown();
-         
         
-
+        OlegBychenkov olegbychenkov = new OlegBychenkov("Oleg", "Bychenkov", 2, 3);
+        addObject(olegbychenkov, 2, 3);
+        olegbychenkov.sitDown();
 
     }  
 }
