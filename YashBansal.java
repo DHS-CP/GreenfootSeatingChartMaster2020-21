@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class KilgoreTrout extends Student implements SpecialInterestOrHobby
+public class YashBansal extends Student implements SpecialInterestOrHobby
 {
 
     /**
@@ -22,12 +22,12 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public KilgoreTrout(String f, String l, int r, int s) {
+    public YashBansal(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         myRow=r;
         mySeat=s;
-        portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
+        portraitFile=f.toLowerCase()+l.toLowerCase()+".JPG";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
@@ -38,13 +38,13 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public KilgoreTrout() {
-        firstName="Kilgore";
-        lastName="Trout";
+    public YashBansal() {
+        firstName="Yash";
+        lastName="Bansal";
         myRow=1;
         mySeat=1;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".JPG";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
         setImage(portraitFile);
@@ -66,12 +66,12 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to time travel!");
+                myHobby("I like to solve rubik's cubes");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+                spiral();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
                 provideLesson();
                 sitDown();
             }
@@ -94,6 +94,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
         while (! sitting) {
         String q=Greenfoot.ask("Are you ready to start (yes/no)");
         if (q.contains("yes")){
+            bluej.utility.Utility.openWebBrowser("https://www.youtube.com/watch?v=oIKZuk9vVz4");
          // put in your lesson here - you can open up a browser for a screencast
          // Create a blackboard image and write to it, etc
          // Use an animated gif and dub over with audio - see "controls/show sound recoder"
@@ -145,6 +146,16 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
         }   
            Greenfoot.delay(20);
            returnToSeat();
+    }
+    
+    public void spiral() {
+        setLocation(0,0);
+        Greenfoot.delay(10);
+        for (int i=0;i<=50;i++) {
+            turn(30);
+            move(2);
+            Greenfoot.delay(5);
+        }
     }
      /**
      * myHobby is one of the interfaces provided.  
