@@ -3,8 +3,8 @@ import java.util.ArrayList;
 /**
  * Write a description of class Student here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author  
+ * @version 
  */
 public abstract class Student extends Actor
 {
@@ -64,6 +64,7 @@ public abstract class Student extends Actor
     public void sitDown(){
         returnToSeat();
         setImage(portraitFile);
+        setRotation(0);
         sitting=true;
     }
         
