@@ -10,19 +10,33 @@ HOW TO START THIS PROJECT:  To start this project, assuming that you have Greenf
 AUTHORS:                    Mr. Kaehms and CSA students
 
 CONTRIBUTERS:               Kilgore Trout
+                            Tinhphong Nguyen
+                            Tanish Baranwal
+                            Trisha Moorkoth
+                            Keenan Kalra
+                            Anirudh Nagasamudra
+                            Akash Darbha
+                            Eric Zheng
+                            Joey Huang
+                            Nibodh Vallapureddy
+                            Ridhi Tamirasa
+                            Shahil Patel
+                            Yash Bansal
+                            Julia Zhao
+                            Anish Shivamurthy
                             (Add you name here once your code 
                              is added and correct)
 
 USER INSTRUCTIONS:
 
-
+ 
 1) Start git bash (assuming that you are using git bash)
 
 2) Move to a directory where you want to keep your work. For instance, cd c:/ then cd Users/YourName/Documents/Assignments
 
 3) Clone the repository into the directory where git bash is pointing:
 
-    git clone https://github.com/DHS-CP/GreenfootSeatingChartMaster2020-21.git
+    git clone https://github.com/tekotan/GreenfootSeatingChartPer2-2020-21
 
 NOTE: This should set up all initial conditions for GIT and avoid a lot of confusion.
 

@@ -1,13 +1,14 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 
 /**
  * The KilgoreTrout class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
- * @author Mr. Kaehms
- * @version 2.0 Aug 13, 2019
- * @version 3.0 July 21, 2020
+ * @Chelsea Lee
+ * @Version 1.0
  */
-public class KilgoreTrout extends Student implements SpecialInterestOrHobby
+public class ChelseaLee extends Student implements SpecialInterestOrHobby
 {
 
     /**
@@ -22,7 +23,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public KilgoreTrout(String f, String l, int r, int s) {
+    public ChelseaLee(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         myRow=r;
@@ -38,9 +39,9 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public KilgoreTrout() {
-        firstName="Kilgore";
-        lastName="Trout";
+    public ChelseaLee() {
+        firstName="Chelsea";
+        lastName="Lee";
         myRow=1;
         mySeat=1;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
@@ -65,15 +66,19 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
                 System.out.println(""); // Print a blank line to create space between any student output.
                 getName();
                 sayName(soundFile);
-            
-                myHobby("I like to time travel!");
+                
+                myHobby("I like to play soccer!");
+                
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
+                spinningClass();
                 circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+       
                 provideLesson();
-                sitDown();
+                
+                
             }
         
     } 
@@ -102,6 +107,8 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
          
         // You can end the lesson and "sitDown" once the lesson is complete, or once
         // someone answers "yes" to the sitdown question
+        
+       
         }
         else {
           q=Greenfoot.ask("I don't understand the question... May I sit down?"); 
@@ -110,12 +117,24 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
             Greenfoot.delay(10);
             sitDown();
         }
+         bluej.utility.Utility.openWebBrowser ("https://drive.google.com/file/d/1BrYFVFSqf7KIi3GXVc4EId76xmf_WrA1/view");
     }
         
     }
     public void answerQuestion(){
         // may not need
     }
+    
+    public void spinningClass(){
+        for (int i=0; i<18; i++){
+                    turn(20);
+                    
+                   Greenfoot.delay(10);
+                }
+                setImage(standingFile);
+    }
+    
+    
     /**
      * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
@@ -124,25 +143,30 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
         setLocation(0,0);
          Greenfoot.delay(10);
         // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
+        for (int i=1;i<=8;i++){
+            setLocation(9,i);
+            turn(20);
             Greenfoot.delay(10);
         }
         // move back
         for (int i=1;i<=5;i++){
-            setLocation(9,i);
+            setLocation(i,0);
+            turn(20);
             Greenfoot.delay(10);
         }      
          // move left
-        for (int i=9;i>=0;i--){
+        for (int i=8;i>=0;i--){
             setLocation(i,5);
+            turn(20);
             Greenfoot.delay(10);
         }      
               // move Forward
         for (int i=5;i>=0;i--){
-            setLocation(0,i);
+            setLocation(5,i);
+            turn(20);
             Greenfoot.delay(10);
-        }   
+        }  
+           turn(360 - getRotation()); 
            Greenfoot.delay(20);
            returnToSeat();
     }
