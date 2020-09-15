@@ -7,9 +7,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class KilgoreTrout extends Student implements SpecialInterestOrHobby
+public class ArvindKumar extends Student implements SpecialInterestOrHobby
 {
-
     /**
      * Constructor for the KilgoreTrout class.
      * Constructors are special methods with the same exact name as the class name.  
@@ -22,12 +21,12 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public KilgoreTrout(String f, String l, int r, int s) {
+    public ArvindKumar(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         myRow=r;
         mySeat=s;
-        portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
+         portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
@@ -38,11 +37,11 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public KilgoreTrout() {
-        firstName="Kilgore";
-        lastName="Trout";
+    public ArvindKumar() {
+        firstName="Arvind";
+        lastName="Kumar";
         myRow=1;
-        mySeat=1;
+        mySeat=2;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
@@ -52,7 +51,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
     }
     
      /**
-     * Act - do whatever the KilgoreTrout actor wants to do. This method is called whenever
+     * Act - do whatever the ArvindKumar actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */   
     public void act() 
@@ -66,7 +65,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to time travel!");
+                myHobby("I like to play video games and watch movies");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
@@ -94,14 +93,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
         while (! sitting) {
         String q=Greenfoot.ask("Are you ready to start (yes/no)");
         if (q.contains("yes")){
-         // put in your lesson here - you can open up a browser for a screencast
-         // Create a blackboard image and write to it, etc
-         // Use an animated gif and dub over with audio - see "controls/show sound recoder"
-         // from main greenfoot menu for a simple to use soud editor
-        
-         
-        // You can end the lesson and "sitDown" once the lesson is complete, or once
-        // someone answers "yes" to the sitdown question
+           bluej.utility.Utility.openWebBrowser("https://drive.google.com/file/d/1ndDRYPx43E1vne4DHCvighAscRY9bEBo/view?usp=sharing");
         }
         else {
           q=Greenfoot.ask("I don't understand the question... May I sit down?"); 
@@ -117,32 +109,66 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
         // may not need
     }
     /**
-     * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
+     * This is a local method specific to the ArvindKumar class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
     public void circleClass(){
-        setLocation(0,0);
+         setLocation(0,0);
          Greenfoot.delay(10);
-        // move right
+       
+        // move right and turn
         for (int i=1;i<=9;i++){
             setLocation(i,0);
             Greenfoot.delay(10);
+            turn(90);
         }
-        // move back
+        // move back and turn
         for (int i=1;i<=5;i++){
             setLocation(9,i);
             Greenfoot.delay(10);
-        }      
-         // move left
+            turn(90);
+        }       
+        // move left and turn
         for (int i=9;i>=0;i--){
             setLocation(i,5);
             Greenfoot.delay(10);
+            turn(180);
         }      
-              // move Forward
+         // move Forward and turn
         for (int i=5;i>=0;i--){
             setLocation(0,i);
             Greenfoot.delay(10);
-        }   
+            turn(90);
+        }  
+        ///This is the second circle
+        // move back and turn
+        for (int i=1;i<=5;i++){
+            setLocation(0,i);
+            Greenfoot.delay(10);
+            turn(90);
+        }       
+        // move right and turn
+        for (int i=1;i<=9;i++){
+            setLocation(i,5);
+            Greenfoot.delay(10);
+            turn(90);
+        }
+        // move Forward and turn
+        for (int i=5;i>=0;i--){
+            setLocation(9,i);
+            Greenfoot.delay(10);
+            turn(90);
+        }
+        // move left and turn
+        for (int i=9;i>=0;i--){
+            setLocation(i,0);
+            Greenfoot.delay(10);
+            turn(180);
+        }      
+        
+       
+       
+       
            Greenfoot.delay(20);
            returnToSeat();
     }
@@ -153,6 +179,6 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      */
      public void myHobby(String s) {
          System.out.println(s);
-}
+    }
 
 }
